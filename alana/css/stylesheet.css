@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url("../assets/fonts/Gotham-Light.otf") format("opentype"),
+         url("../assets/fonts/Gotham-Light.tff") format("truetype");
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url("../assets/fonts/Gotham-Book.otf") format("opentype"),
+         url("../assets/fonts/Gotham-Book.tff") format("truetype");
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url("../assets/fonts/Gotham-Medium.otf") format("opentype"),
+         url("../assets/fonts/Gotham-Medium.tff") format("truetype");
+}
+
+body {
+/*    background-color: #f1f1f1;*/
+    font-family: 'Gotham-Book', sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.navbar .nav-title {
+    font-size: 28pt;
+    font-family: 'Gotham-Book', sans-serif;
+}
+
+.navbar .navbar-nav {
+    font-family: 'Gotham-Light', sans-serif;
+    margin-top: 20px;
+    font-size: 16pt;
+}
+
+.navbar .navbar-nav .nav-item {
+    width: 50%;
+    margin: auto;
+}
+
+.navbar .navbar-nav .nav-item:last-child{
+    width: 100%;
+    margin: auto;
+}
+
+@media(min-width:544px) {    
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        
+    }
+
+    .navbar .navbar-nav .nav-item,
+    .navbar .navbar-nav .nav-item:last-child {
+        margin-left: 20px;
+        margin-right: 20px;   
+        width: auto;
+    }
+} 
+
+
+.row {
+    margin-bottom: 40px;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0px;    
+    color: transparent;
+    background-color: transparent;
+    -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+    -moz-transition:    background-color 0.5s ease, color 0.5s ease;
+    -ms-transition:     background-color 0.5s ease, color 0.5s ease;
+    -o-transition:      background-color 0.5s ease, color 0.5s ease;
+    transition:         background-color 0.5s ease, color 0.5s ease;
+}
+
+.overlay:hover,
+.overlay:focus {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 767px) {
+    .row {
+        margin-bottom: 0;
+    }
+    .row .col-md-4 {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium */
+@media(min-width: 768px) {
+    .overlay {
+        left: 15px;
+        width: 210px;
+    }
+}
+
+/* Large */
+@media(min-width: 992px) {
+    .overlay {
+        width: 284px;
+    }
+}
+
+/* Extra-Large */
+@media(min-width: 1200px) {
+    .overlay {
+        width: 351px;
+    }
+}
+
+.wrapper {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    color: inherit;
+    font-size: 14pt;
+}
+
+.inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#ap-col img{
+    width: 100%;
+}
+
+/** Interior pages stylings **/
+
+.interior {
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.container-img {
+    max-width: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container-img-wide {
+    max-width: 750px;
+}
+
+.container-img img {
+    display: block;
+    margin: auto;
+    max-height: 600px;
+/*
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0077cf;
+*/
+}
+
+.bordered {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#annual-report-spreads img{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.verticalline {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    border-right: 1px solid #000;
+}
+
+#aim-high-container .row:first-child{
+    margin-bottom: 40px;
+}
+
+#aim-high-container .row:last-child{
+    margin-top: 60px;
+}
+
+#analyst-conference-container img {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.container-wide {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/** About page **/
+
+#about-container {
+    text-align: center;
+    height: 1000px;
+}
+
+#about-container img {
+    display: block;
+    margin: auto;
+    height: 390px;
+    width: auto;
+}
+
+#about-container div {
+    margin-top: 50px;
+}
+
+#analyst-conference-img-container {
+}
+
+/** Embedded slides styles **/
+.issuuembed {
+    height: 606px;
+}
+
+/* Pro Bono Container */
+.carousel-images div img {
+    height: 500px;
+    width: 650px;
+}
