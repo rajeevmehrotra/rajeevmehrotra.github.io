@@ -5,7 +5,11 @@
 }
 
 .navbar .navbar-brand {
-  padding-left: 20px;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  text-align: center;
 }
 
 .headroom {
@@ -42,6 +46,19 @@
   outline: 0;
 }
 
+.navbar .navbar-collapse:after {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: #000;
+  content: "";
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
 .headroom--top .navbar-collapse {
   box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
 }
@@ -53,15 +70,37 @@
 }
 
 #topNavbar {
-  float: right;
   text-align: end;
-  padding-right: 20px;
 }
 
 #topNavbar .navbar-nav {
   margin-left: auto;
+  z-index: 10;
+  background-color: #fff;
+  padding-left: 40px;
+  padding-right: 20px;
 }
 
 #topNavbar .navbar-nav .nav-item:last-child .nav-link {
   padding-right: 0;
+}
+
+.navbar .navbar-brand, .navbar .navbar-toggler {
+  opacity: 0;
+  animation: fade-in-right ease 0.4s forwards;
+}
+
+.navbar .navbar-toggler {
+  animation-delay: 0.8s;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-brand, .navbar .navbar-nav .nav-item {
+    opacity: 0;
+    animation: fade-in-right ease 0.4s forwards;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    animation-delay: 0.8s;
+  }
 }
