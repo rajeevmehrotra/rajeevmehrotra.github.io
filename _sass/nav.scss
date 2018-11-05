@@ -1,0 +1,67 @@
+.navbar {
+  background-color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .navbar-brand {
+  padding-left: 20px;
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+  -webkit-transition: transform 200ms linear;
+  -moz-transition: transform 200ms linear;
+  -o-transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -o-transform: translateY(0%);
+}
+.headroom--pinned.headroom--not-top {
+  box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
+
+.navbar-light .navbar-toggler {
+  color: transparent;
+  border-color: transparent;
+  padding-right: 20px;
+  border-width: 0;
+}
+
+.navbar-light .navbar-toggler:focus {
+  outline: 0;
+}
+
+.headroom--top .navbar-collapse {
+  box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
+}
+
+@media (min-width: 768px) {
+  .headroom--top .navbar-collapse {
+    box-shadow: none;
+  }
+}
+
+#topNavbar {
+  float: right;
+  text-align: end;
+  padding-right: 20px;
+}
+
+#topNavbar .navbar-nav {
+  margin-left: auto;
+}
+
+#topNavbar .navbar-nav .nav-item:last-child .nav-link {
+  padding-right: 0;
+}
