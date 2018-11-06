@@ -19,15 +19,18 @@
   -moz-transition: transform 200ms linear;
   -o-transition: transform 200ms linear;
 }
+
 .headroom--pinned {
   transform: translateY(0%);
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -o-transform: translateY(0%);
 }
+
 .headroom--pinned.headroom--not-top {
   box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
 }
+
 .headroom--unpinned {
   transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
@@ -79,10 +82,10 @@
 }
 
 .navbar .navbar-brand {
-  animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -o-animation-delay: 0.2s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
 }
 
 .navbar .navbar-toggler {
