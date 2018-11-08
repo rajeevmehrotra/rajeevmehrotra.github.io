@@ -3,16 +3,30 @@ html, body {
   height: 100%; /* DEBUG to test out scrolling */
 }
 
-body {
-  padding-top: 56px;
-}
-
 section {
   width: 100%;
-  height: 100%;
   max-width: 700px;
+  padding: 100px 0;
 }
 
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+
+#hero {
+  height: 100%;
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+@media(min-width: 768px) {
+  section .content {
+    max-width: 700px;
+    margin-left: 100px;
+  }
+}
 
 section > div > h2 {
   margin-bottom: 50px;
@@ -58,8 +72,19 @@ h2 span {
 }
 
 #hero {
-  animation-delay: 0.9s;
-  -webkit-animation-delay: 0.9s;
-  -moz-animation-delay: 0.9s;
-  -o-animation-delay: 0.9s;
+  animation-delay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+}
+
+// #about, #experience {
+//   opacity: 0;
+// }
+
+.show-section {
+  animation: fade-in-up ease 0.4s forwards;
+  -webkit-animation: fade-in-up ease 0.8s forwards;
+  -moz-animation: fade-in-up ease 0.4s forwards;
+  -o-animation: fade-in-up ease 0.4s forwards;
 }

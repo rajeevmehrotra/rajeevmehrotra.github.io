@@ -5,12 +5,19 @@
 }
 
 .navbar .navbar-brand {
-  margin-left: 30px;
+  margin-left: 10px;
   width: 40px;
   height: 40px;
   border: 1px solid #000;
   text-align: center;
 }
+
+@media(min-width: 768px) {
+  .navbar .navbar-brand {
+    margin-left: 30px;
+  }
+}
+
 
 .headroom {
   will-change: transform;
@@ -41,8 +48,14 @@
 .navbar-light .navbar-toggler {
   color: transparent;
   border-color: transparent;
-  padding-right: 30px;
+  padding-right: 10px;
   border-width: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-light .navbar-toggler {
+    padding-right: 30px;
+  }
 }
 
 .navbar-light .navbar-toggler:focus {
