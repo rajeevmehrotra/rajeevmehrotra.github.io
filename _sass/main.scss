@@ -7,6 +7,7 @@ section {
   width: 100%;
   max-width: 700px;
   padding: 100px 0;
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -78,13 +79,9 @@ h2 span {
   -o-animation-delay: 1.3s;
 }
 
-// #about, #experience {
-//   opacity: 0;
-// }
-
 .show-section {
   animation: fade-in-up ease 0.4s forwards;
-  -webkit-animation: fade-in-up ease 0.8s forwards;
+  -webkit-animation: fade-in-up ease 0.4s forwards;
   -moz-animation: fade-in-up ease 0.4s forwards;
   -o-animation: fade-in-up ease 0.4s forwards;
 }

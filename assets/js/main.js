@@ -16,7 +16,7 @@
       offset : 60,
       onUnpin: function() {
         if (navLock) {
-          // Don't hide the navbar
+          // Don't hide the navbar in certain cases
           $(this.elem).removeClass('headroom--unpinned');
           $(this.elem).addClass('headroom--pinned');
         }
@@ -25,7 +25,7 @@
   headroom.init();
 
   $(document).click(collapseNavbar);
-  $(document).scroll(collapseNavbar);
+  $(document).scroll(handleScroll);
 
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -50,15 +50,18 @@ function collapseNavbar(e) {
     return;
   }
   $('.collapse').collapse('hide');
+}
+
+function handleScroll(e) {
+  collapseNavbar(e);
   var docTop = $(window).scrollTop();
   var docHeight = $(window).height();
-  var docBottom = docTop + docHeight;
-  // $('section .content').each(function() {
-  //   var elt = $(this);
-  //   if (elt.offset().top < (docTop + docHeight / 2)) {
-  //     if (!$(elt).parent().hasClass('show-section')) {
-  //       $(elt).parent().addClass('show-section');
-  //     }
-  //   }
-  // })
+  $('section .content').each(function() {
+    var elt = $(this);
+    if (elt.offset().top < (docTop + docHeight * 3 / 4)) {
+      if (!$(elt).parent().hasClass('show-section')) {
+        $(elt).parent().addClass('show-section');
+      }
+    }
+  });
 }
