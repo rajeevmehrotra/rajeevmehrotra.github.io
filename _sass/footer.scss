@@ -27,6 +27,10 @@
   text-decoration: underline;
 }
 
+.social .email i {
+  font-size: 20pt;
+}
+
 @media (min-width: 768px) {
   .social {
     height: 100px;
@@ -34,7 +38,7 @@
   }
 
   .social .email {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 }
 
