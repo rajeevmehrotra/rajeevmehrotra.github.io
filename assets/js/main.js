@@ -28,7 +28,7 @@
   $(document).scroll(handleScroll);
 
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $("nav a").on('click', function(event) {
     // Put a lock on navbar hiding
     navLock = true;
     // Store hash
