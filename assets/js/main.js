@@ -43,6 +43,8 @@
     });
   });
 
+  $('.night-mode-toggler').click(toggleNightMode);
+
 }());
 
 function collapseNavbar(e) {
@@ -64,4 +66,19 @@ function handleScroll(e) {
       }
     }
   });
+}
+
+function toggleNightMode() {
+  // TODO, night mode stylings
+  var icon = $(this).children('.far');
+  if ($('.night-mode-toggler').hasClass('enabled')) {
+    // Disable night mode
+    $(this).removeClass('enabled');
+    $(icon).removeClass('fa-sun');
+    $(icon).addClass('fa-moon');
+    return;
+  }
+  $(icon).removeClass('fa-moon');
+  $(icon).addClass('fa-sun');
+  $(this).addClass('enabled');
 }

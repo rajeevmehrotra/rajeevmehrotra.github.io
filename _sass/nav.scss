@@ -85,8 +85,17 @@
   padding-right: 0;
 }
 
+#topNavbar .night-mode-toggler {
+  font-size: 14pt;
+  margin-left: 10px
+}
+
+#topNavbar .night-mode-toggler:hover {
+  cursor: pointer;
+}
+
 /* Animation stylings */
-.navbar .navbar-brand, .navbar .navbar-toggler {
+.navbar .navbar-brand, .navbar .navbar-toggler-container {
   opacity: 0;
   animation: fade-in-right ease 0.4s forwards;
   -webkit-animation: fade-in-right ease 0.4s forwards;
@@ -101,7 +110,7 @@
   -o-animation-delay: 0.3s;
 }
 
-.navbar .navbar-toggler {
+.navbar .navbar-toggler-container {
   animation-delay: 0.8s;
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
