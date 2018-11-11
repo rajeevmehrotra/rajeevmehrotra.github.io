@@ -8,15 +8,15 @@ html, body {
 body.night-mode {
   background-color: $dark-background-color;
   color: $dark-text-color;
-}
 
-body.night-mode h2 {
-  background-color: $dark-text-color;
-}
+  h2 {
+    background-color: $dark-text-color;
 
-body.night-mode h2 span {
-  background-color: $dark-background-color;
-  color: $dark-text-color;
+    span {
+      background-color: $dark-background-color;
+      color: $dark-text-color;
+    }
+  }
 }
 
 section {
@@ -58,11 +58,11 @@ h2 {
   width: 100%;
   border-bottom: 1px solid #000;
   line-height: 0.1em;
-}
 
-h2 span {
-   background:#fff;
-   padding-right: 30px;
+  span {
+    background:#fff;
+    padding-right: 30px;
+ }
 }
 
 #content {
