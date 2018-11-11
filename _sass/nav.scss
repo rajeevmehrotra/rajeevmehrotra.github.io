@@ -127,7 +127,11 @@
 }
 
 .navbar.night-mode #topNavbar .navbar-nav .nav-link {
-  color: #fff;
+  color: $dark-link-color;
+}
+
+.navbar.night-mode #topNavbar .navbar-nav .nav-link:hover {
+  color: $dark-link-color-hover;
 }
 
 /* Animation stylings */

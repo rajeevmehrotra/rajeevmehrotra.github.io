@@ -39,11 +39,11 @@
 
 .social.night-mode div {
    a {
-   color: rgba(218, 218, 218, 0.5);
+   color: $dark-link-color;
   }
 
   a:hover {
-    color: $dark-text-color;
+    color: $dark-link-color-hover;
   }
 }
 
