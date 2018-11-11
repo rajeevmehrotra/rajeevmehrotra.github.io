@@ -43,6 +43,8 @@
     });
   });
 
+  // Initialize night mode toggler
+  $('.night-mode-toggler .far').addClass('fa-moon');
   $('.night-mode-toggler').click(toggleNightMode);
 
 }());
@@ -70,15 +72,17 @@ function handleScroll(e) {
 
 function toggleNightMode() {
   // TODO, night mode stylings
-  var icon = $(this).children('.far');
+  var icon = $('.night-mode-toggler').children('.far');
   if ($('.night-mode-toggler').hasClass('enabled')) {
     // Disable night mode
-    $(this).removeClass('enabled');
-    $(icon).removeClass('fa-sun');
+    $('body, .navbar, footer, .social').removeClass('night-mode');
+    $('.night-mode-toggler').removeClass('enabled');
+    $(icon).removeClass('fa-lightbulb');
     $(icon).addClass('fa-moon');
     return;
   }
+  $('body, .navbar, footer, .social').addClass('night-mode');
   $(icon).removeClass('fa-moon');
-  $(icon).addClass('fa-sun');
-  $(this).addClass('enabled');
+  $(icon).addClass('fa-lightbulb');
+  $('.night-mode-toggler').addClass('enabled');
 }

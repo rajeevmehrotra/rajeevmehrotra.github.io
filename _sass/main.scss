@@ -1,6 +1,22 @@
+@import 'variables';
+
 html, body {
   font-family: 'Quicksand', sans-serif;
-  height: 100%; /* DEBUG to test out scrolling */
+  height: 100%;
+}
+
+body.night-mode {
+  background-color: $dark-background-color;
+  color: $dark-text-color;
+}
+
+body.night-mode h2 {
+  background-color: $dark-text-color;
+}
+
+body.night-mode h2 span {
+  background-color: $dark-background-color;
+  color: $dark-text-color;
 }
 
 section {

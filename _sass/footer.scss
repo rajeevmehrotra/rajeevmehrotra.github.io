@@ -1,3 +1,5 @@
+@import 'variables';
+
 .social {
   position: sticky;
   bottom: 0;
@@ -10,12 +12,20 @@
 }
 
 .social div a {
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   margin: 5px;
+}
+
+.social.night-mode div a {
+  color: rgba(218, 218, 218, 0.5);
 }
 
 .social div a:hover {
   color: #000;
+}
+
+.social.night-mode div a:hover {
+  color: $dark-text-color;
 }
 
 .social .email {
@@ -34,11 +44,11 @@
 @media (min-width: 768px) {
   .social {
     height: 100px;
-    padding: 0 30px;
+    padding: 0 20px 20px 20px;
   }
 
   .social .email {
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
   }
 }
 
@@ -46,8 +56,12 @@ footer {
   width: 100%;
   text-align: center;
   padding: 15px 0;
-  background-color: rgba(218, 218, 218, 0.3);
+  background-color: $light-alternate-color;
   line-height: 2;
+}
+
+footer.night-mode {
+  background-color: $dark-alternate-color;
 }
 
 /* Animations */

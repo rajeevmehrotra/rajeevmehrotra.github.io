@@ -1,15 +1,53 @@
+@import 'variables';
+
 .navbar {
-  background-color: #fff;
+  background-color: $light-background-color;
   padding-left: 0;
   padding-right: 0;
+
+  .navbar-brand {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  #topNavbar {
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link {
+      padding-right: 0;
+    }
+
+    .night-mode-toggler {
+      font-size: 14pt;
+      margin-left: 10px;
+
+      .fa-lightbulb {
+        padding-left: 6px;
+      }
+    }
+    .night-mode-toggler:hover {
+      cursor: pointer;
+    }
+  }
 }
 
-.navbar .navbar-brand {
-  margin-left: 10px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #000;
-  text-align: center;
+.navbar.night-mode {
+  background-color: $dark-background-color;
+  color: $dark-text-color;
+
+  .navbar-brand {
+    border-color: $dark-text-color;
+    color: $dark-text-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
 }
 
 @media(min-width: 768px) {
@@ -34,8 +72,12 @@
   -o-transform: translateY(0%);
 }
 
-.headroom--pinned.headroom--not-top {
+.navbar.headroom--pinned.headroom--not-top {
   box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
+}
+
+.navbar.headroom--pinned.headroom--not-top.night-mode {
+  box-shadow: rgba(98, 114, 123, 0.2) 0px 2px 4px;
 }
 
 .headroom--unpinned {
@@ -66,8 +108,15 @@
   box-shadow: rgba(218, 218, 218, 0.9) 0px 2px 4px;
 }
 
+.navbar.night-mode.headroom--top .navbar-collapse {
+  box-shadow: rgba(98, 114, 123, 0.2) 0px 2px 4px;
+}
+
 @media (min-width: 768px) {
   .headroom--top .navbar-collapse {
+    box-shadow: none;
+  }
+  .navbar.night-mode.headroom--top .navbar-collapse {
     box-shadow: none;
   }
 }
@@ -77,21 +126,8 @@
   padding-right: 30px;
 }
 
-#topNavbar .navbar-nav {
-  margin-left: auto;
-}
-
-#topNavbar .navbar-nav .nav-item:last-child .nav-link {
-  padding-right: 0;
-}
-
-#topNavbar .night-mode-toggler {
-  font-size: 14pt;
-  margin-left: 10px
-}
-
-#topNavbar .night-mode-toggler:hover {
-  cursor: pointer;
+.navbar.night-mode #topNavbar .navbar-nav .nav-link {
+  color: #fff;
 }
 
 /* Animation stylings */
