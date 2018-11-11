@@ -4,51 +4,54 @@
   position: sticky;
   bottom: 0;
   margin-bottom: 10px;
+
+  div {
+    font-size: 20pt;
+    line-height: 0;
+
+    a {
+      color: rgba(0, 0, 0, 0.5);
+      margin: 5px;
+    }
+
+    a:hover {
+      color: #000;
+    }
+
+  }
+
+  .email {
+    font-size: 14pt;
+    line-height: 1;
+
+    a {
+      text-decoration: underline;
+    }
+
+    i {
+      font-size: 20pt;
+    }
+
+  }
 }
 
-.social div {
-  font-size: 20pt;
-  line-height: 0;
+
+
+.social.night-mode div {
+   a {
+   color: rgba(218, 218, 218, 0.5);
+  }
+
+  a:hover {
+    color: $dark-text-color;
+  }
 }
 
-.social div a {
-  color: rgba(0, 0, 0, 0.5);
-  margin: 5px;
-}
-
-.social.night-mode div a {
-  color: rgba(218, 218, 218, 0.5);
-}
-
-.social div a:hover {
-  color: #000;
-}
-
-.social.night-mode div a:hover {
-  color: $dark-text-color;
-}
-
-.social .email {
-  font-size: 14pt;
-  line-height: 1;
-}
-
-.social .email a {
-  text-decoration: underline;
-}
-
-.social .email i {
-  font-size: 20pt;
-}
 
 @media (min-width: 768px) {
   .social {
     height: 100px;
     padding: 0 20px 20px 20px;
-  }
-
-  .social .email {
-    // padding-bottom: 15px;
   }
 }
 
