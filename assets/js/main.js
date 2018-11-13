@@ -2,7 +2,7 @@
   var header = document.querySelector(".navbar");
 
   if(window.location.hash) {
-    header.classList.add("headroom--unpinned");
+    header.classList.add("headroom--pinned");
   }
 
   // Prevent navbar from hiding if one of the links is clicked
@@ -47,11 +47,13 @@
   // Initialize night mode toggler
   $('.night-mode-toggler .far').addClass('fa-moon');
   $('.night-mode-toggler').click(toggleNightMode);
+  // Handle initial scroll position
+  handleScroll();
 
 }());
 
 function collapseNavbar(e) {
-  if ($(e.target).is('.navbar') || $('.navbar').find($(e.target)).length > 0){
+  if (!e || $(e.target).is('.navbar') || $('.navbar').find($(e.target)).length > 0){
     return;
   }
   $('.collapse').collapse('hide');
@@ -72,7 +74,6 @@ function handleScroll(e) {
 }
 
 function toggleNightMode() {
-  // TODO, night mode stylings
   var icon = $('.night-mode-toggler').children('.far');
   if ($('.night-mode-toggler').hasClass('enabled')) {
     // Disable night mode
