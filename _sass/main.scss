@@ -17,6 +17,22 @@ body.night-mode {
       color: $dark-text-color;
     }
   }
+
+  #experience {
+    a {
+      color: $dark-external-link-color;
+    }
+
+    ul {
+      li .tag {
+        color: $dark-link-color;
+        border-color: rgba(218, 218, 218, 0.5);
+      }
+      li:before {
+        color: $dark-external-link-color;
+      }
+    }
+  }
 }
 
 section {
@@ -77,6 +93,41 @@ h2 {
   margin-left: -150px;
   margin-top: -100px;
   text-align: center;
+}
+
+#experience {
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 15px;
+
+      .tag-array {
+        margin: 10px 0 0 10px;
+      }
+
+      .tag {
+        padding: .25rem .5rem;
+        font-size: .875rem;
+        line-height: 1.5;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin: 0 10px 5px 0;
+        color: $light-link-color-hover;
+      }
+    }
+
+    li:before {
+      color: $light-link-color-hover;
+      content: '> ';
+      float: left;
+      margin-left: -20px;
+      margin-top: -1px;
+    }
+  }
+}
+
+#skills table {
+  margin-left: 20px;
 }
 
 /* Animation stylings */
