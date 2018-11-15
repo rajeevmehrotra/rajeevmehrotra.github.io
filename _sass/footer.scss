@@ -70,12 +70,12 @@ footer.night-mode {
 /* Animations */
 .social {
   opacity: 0;
-  animation: fade-in-up ease 0.4s forwards;
-  -webkit-animation: fade-in-up ease 0.4s forwards;
-  -moz-animation: fade-in-up ease 0.4s forwards;
-  -o-animation: fade-in-up ease 0.4s forwards;
-  animation-delay: 0.8s;
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  -o-animation-delay: 0.8s;
+  animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+  -webkit-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+  -moz-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+  -o-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+  animation-delay: 1.0s;
+  -webkit-animation-delay: 1.0s;
+  -moz-animation-delay: 1.0s;
+  -o-animation-delay: 1.0s;
 }

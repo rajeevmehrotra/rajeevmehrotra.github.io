@@ -29,9 +29,13 @@ body.night-mode {
         border-color: rgba(218, 218, 218, 0.5);
       }
       li:before {
-        color: $dark-external-link-color;
+        color: $dark-link-color;
       }
     }
+  }
+
+  #skills table tbody td {
+    color: rgba(218, 218, 218, 0.7);
   }
 }
 
@@ -133,17 +137,17 @@ h2 {
 /* Animation stylings */
 #hero {
   opacity: 0;
-  animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
-  -webkit-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
-  -moz-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
-  -o-animation: fade-in-up cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s forwards;
+  animation: fade-in-up ease 0.4s forwards;
+  -webkit-animation: fade-in-up ease 0.4s forwards;
+  -moz-animation: fade-in-up ease 0.4s forwards;
+  -o-animation: fade-in-up ease 0.4s forwards;
 }
 
 #hero {
-  animation-delay: 1.3s;
-  -webkit-animation-delay: 1.3s;
-  -moz-animation-delay: 1.3s;
-  -o-animation-delay: 1.3s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
 }
 
 .show-section {
