@@ -29,6 +29,9 @@
 
   // Add smooth scrolling to all links
   $("nav a").on('click', function(event) {
+    if ($(this).attr('id') === 'nav-resume-link') {
+      return;
+    }
     event.preventDefault();
     // Put a lock on navbar hiding
     navLock = true;
