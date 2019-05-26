@@ -1,3 +1,16 @@
-title: Rajeev Mehrotra Website
+title: Raj Mehrotra's Website
+description: A personal website for Raj Mehrotra
+url: https://rajmehrotra.com/
+twitter:
+  username: RajAlexMehrotra
+  card: summary
+logo: /assets/img/favicon.ico
+social:
+  name: Raj Mehrotra
+  links:
+    - https://github.com/rajeevmehrotra
+    - https://www.linkedin.com/in/raj-mehrotra/
+    - https://twitter.com/RajAlexMehrotra
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
