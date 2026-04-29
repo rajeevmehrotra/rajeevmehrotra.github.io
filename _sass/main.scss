@@ -46,8 +46,24 @@ body.night-mode {
     }
   }
 
-  #skills table tbody td {
-    color: rgba(218, 218, 218, 0.7);
+  #skills .skill-column {
+    h3 {
+      color: $dark-text-color;
+    }
+    ul li {
+      color: rgba(218, 218, 218, 0.7);
+    }
+  }
+
+  #experience {
+    .company-header,
+    .role-header {
+      color: $dark-text-color;
+    }
+    .company-dates,
+    .role-meta {
+      color: rgba(218, 218, 218, 0.6);
+    }
   }
 }
 
@@ -142,8 +158,68 @@ h2 {
   }
 }
 
-#skills table {
-  margin-left: 20px;
+#skills {
+  .skills-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .skill-column {
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $light-link-color-hover;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        color: $light-link-color-hover;
+      }
+    }
+  }
+}
+
+#experience {
+  .company-header {
+    margin-top: 40px;
+    margin-bottom: 4px;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    .company-dates {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: $light-link-color;
+      margin-left: 8px;
+    }
+  }
+
+  .role-header {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+
+    .role-meta {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: $light-link-color;
+      margin-left: 6px;
+    }
+  }
 }
 
 /* Animation stylings */
